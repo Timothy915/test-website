@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css.co.css">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: orange;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+</style>
+<body>
+  <main>
+<nav>
+   <ul class="menu">
+     <li class="logo"><a href="#">zedTune.com</a></li>
+     <li class="item"><a href="#">Home</a></li>
+     <li class="item"><a href="#">About</a></li>
+     <li class="item has-submenu">
+       <a tabindex="0">Services</a>
+       <ul class="submenu">
+         <li class="subitem"><a href="#">Design</a></li>
+         <li class="subitem"><a href="#">Development</a></li>
+         <li class="subitem"><a href="#">SEO</a></li>
+         <li class="subitem"><a href="#">Copywriting</a></li>
+       </ul>
+     </li>
+     <li class="item has-submenu">
+       <a tabindex="0">Plans</a>
+       <ul class="submenu">
+         <li class="subitem"><a href="#">Freelancer</a></li>
+         <li class="subitem"><a href="#">Startup</a></li>
+         <li class="subitem"><a href="#">Enterprise</a></li>
+       </ul>
+     </li>
+     <li class="item"><a href="#">Blog</a></li>
+     <li class="item"><a href="#">Contact</a>
+     </li>
+     <li class="item button"><a href="index.LOGIN.html">Log In</a></li>
+     <li class="item button secondary"><a href="index.sign.html">Search</a></li>
+     <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+   </ul>
+</nav>
+<form class="example" action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+<!--
+<p>Centered inside a form with max-width:</p>
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+-->
+<!--
+</nav>
+
+<div class="content">
+<h1> Trending music</h1>
+<p class="par">Medicine vby</p>
+<audio controls src="audios/03 - Medicine - (SongsLover.com).mp3"></audio></audio>
+
+</div>
+</nav>
+-->
+<nav>
+  <section class="projects">
+    <div class="content-wrap divider">
+      <h2>Latests Songs</h2>
+      <p>View selected projects below. More information can be found at <a href="http://christinatruong.com">christinatruong.com</a>.</p>
+
+  <section class="project-item">
+    <img src="images/background.png.2.jpg" alt="Lynda & LinkedIn Learning course list">
+    <h3>Chile One Mr Zambia - "Lost Generation" </h3>
+    <p>Developed content and instruction for various CSS and front-end focused web development courses including CSS Essential Training, Getting Your Website Online, Design Systems & Architectures and more.</p>
+    <a class="btn" href="https://www.linkedin.com/learning/instructors/christina-truong?u=2125562" target="_blank">Download Mp3</a>
+    <a class="btn" href="https://www.lynda.com/Christina-Truong/7842227-1.html">Video</a>
+  </section>
+
+<script>
+   const toggle = document.querySelector(".toggle");
+const menu = document.querySelector(".menu");
+const items = document.querySelectorAll(".item");
+
+/* Toggle mobile menu */
+function toggleMenu() {
+  if (menu.classList.contains("active")) {
+    menu.classList.remove("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+  } else {
+    menu.classList.add("active");
+    toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+  }
+}
+
+/* Activate Submenu */
+function toggleItem() {
+  if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+  } else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+  } else {
+    this.classList.add("submenu-active");
+  }
+}
+
+/* Close Submenu From Anywhere */
+function closeSubmenu(e) {
+  if (menu.querySelector(".submenu-active")) {
+    let isClickInside = menu
+      .querySelector(".submenu-active")
+      .contains(e.target);
+
+    if (!isClickInside && menu.querySelector(".submenu-active")) {
+      menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    }
+  }
+}
+/* Event Listeners */
+toggle.addEventListener("click", toggleMenu, false);
+for (let item of items) {
+  if (item.querySelector(".submenu")) {
+    item.addEventListener("click", toggleItem, false);
+  }
+  item.addEventListener("keypress", toggleItem, false);
+}
+document.addEventListener("click", closeSubmenu, false);
+</script>
+</main>
+</body>
+</html>
+ 
+ 
